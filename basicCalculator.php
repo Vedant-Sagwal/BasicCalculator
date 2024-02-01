@@ -1,26 +1,3 @@
-<?php
-    if (isset($_GET["num1"]) && isset($_GET["num2"])){
-            $num1=$_GET["num1"];
-            $num2=$_GET["num2"];
-            $num3=$_GET["operator"];
-            if ($num3 == "add")
-            {
-                echo "Sum is ".($num1 + $num2);
-            }
-            else if ($num3=="subtract")
-            {
-                echo "Difference is : ".($num1- $num2);
-            }
-            else if($num3 == "multiply")
-            {
-                echo "Product is : ".$num1*$num2;
-            }
-            else if ($num3 == "divide")
-            {
-                echo "Division is : ".($num1 / $num2);
-            }
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -31,7 +8,7 @@
     </head>
     <body>
     <h1>Basic Calculator</h1>
-         <form action= <?php $_SERVER["PHP_SELF"]?> method="get">
+         <form action="basicCalculator.php" method="get">
             <p>
                 <label for="num1">Enter a number</label>
                 <input type="number" id="num1" name = "num1">
@@ -52,5 +29,29 @@
             <button type="submit">Submit</button>
          </form>
          <br>
+         <section id ="add">
+         <?php
+            $num1=$_GET["num1"];
+            $num2=$_GET["num2"];
+            $num3=$_GET["operator"];
+            if ($num3 == "add")
+            {
+                echo "Sum is ".($num1 + $num2);
+            }
+            else if ($num3=="subtract")
+            {
+                echo "Difference is : ".($num1- $num2);
+            }
+            else if($num3 == "multiply")
+            {
+                echo "Product is : ".$num1*$num2;
+            }
+            else if ($num3 == "divide")
+            {
+                echo "Division is : ".($num1 / $num2);
+            }
+         ?>
+         </section>
 </body>
+</html>
 </html>
