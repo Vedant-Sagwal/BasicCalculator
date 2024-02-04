@@ -1,5 +1,5 @@
 # BasicCalculator
 
-This is a basic calculator made using PHP and HTML and basic CSS.
+This is a basic calculator made using PHP and HTML.
 <br>
 Author - Vedant Sagwal
